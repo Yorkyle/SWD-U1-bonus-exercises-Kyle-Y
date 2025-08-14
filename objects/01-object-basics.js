@@ -77,6 +77,7 @@ console.log(city);
 
 // EXAMPLE: Because St. Louis city is not actually part of St. Louis county, statistically its population is much lower than that of the true metro area. Let's use dot notation to add a new property that clarifies.
 city.metroPopulation = 2807338;
+city.cityGDP = "$987,654";
 console.log(city);
 
 // TRY IT! Use bracket notation to change the name of the state so that it is spelled out instead of being a two-letter abbreviation. Print the resulting object.

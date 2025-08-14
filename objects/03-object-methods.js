@@ -17,31 +17,31 @@
 
 // Option 1: Reference an external named function
 function addTwo(a, b) {
-    return a + b;
+	return a + b;
 }
 let add = {
-    name: "Addition",
-    type: "Arithmetic",
-    doTheMath: addTwo // reference, not a call, so no ()
+	name: "Addition",
+	type: "Arithmetic",
+	doTheMath: addTwo // reference, not a call, so no ()
 };
 
 // Option 2: Reference an external anonymous function stored in a variable
-let subtractTwo = function(a, b) {
-    return a - b;
+let subtractTwo = function (a, b) {
+	return a - b;
 }
 let subtract = {
-    name: "Subtraction",
-    type: "Arithmetic",
-    doTheMath: subtractTwo // reference, not a call, so no ()
+	name: "Subtraction",
+	type: "Arithmetic",
+	doTheMath: subtractTwo // reference, not a call, so no ()
 };
 
 // Option 3: put an anonymous function directly inside the object
 let multiply = {
-    name: "Multiplication",
-    type: "Arithmetic",
-    doTheMath: function(a, b) {
-        return a * b;
-    }
+	name: "Multiplication",
+	type: "Arithmetic",
+	doTheMath: function (a, b) {
+		return a * b;
+	}
 };
 
 // Let's set some values to use as arguments when we call each method below.
@@ -87,9 +87,17 @@ let skittles = {
 	name: "Skittles",
 	type: "fruit-flavored",
 	slogan: "Taste the rainbow",
+	describeCandy: skittlesDescription
 	// TODO: add describeCandy property (method) referencing your external function that is stored in a variable
-	
+
 };
+
+function skittlesDescription() {
+	return "\nTart and tasty, reminds one of leprechauns, clovers, and blue moons.";
+}
+
+console.log(skittles.describeCandy());
+
 
 let werthers = {
 	name: "Werther's Original",
